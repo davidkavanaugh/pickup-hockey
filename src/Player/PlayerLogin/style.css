@@ -1,0 +1,13 @@
+#player_player-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.manager-login-link {
+    margin-top: 50px;
+    font-family: 'Roboto';
+    color: #1400ff;
+    font-size: 0.9em;
+}
