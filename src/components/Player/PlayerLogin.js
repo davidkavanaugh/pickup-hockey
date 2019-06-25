@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import icon from '../../../images/icon.jpg';
+import icon from '../../images/icon.jpg';
 import { Link } from 'react-router-dom';
 
 class PlayerLogin extends Component {
