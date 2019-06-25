@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import icon from '../../images/icon.jpg';
 
-class ManagerLogin extends Component {
+class Login extends Component {
     render() { 
         return ( 
             <div>
-                <h2>Manager Login Works</h2>
+                <div className="navbar">
+                    <img className="icon" src={icon} alt="icon" />
+                    <header>Manager Login</header>
+                    <span className="spacer"></span>
+                </div>
+                <Link className="switch-login-link" to="/">PLAYER LOGIN</Link>
             </div>
          );
     }
 }
  
-export default ManagerLogin;
+export default Login;

@@ -96,3 +96,10 @@ label {
     font-size: 1.2em;
     text-align: center;
 }
+
+.switch-login-link {
+    margin-top: 25px;
+    font-family: 'Roboto';
+    color: #1400ff;
+    font-size: 0.9em;
+}

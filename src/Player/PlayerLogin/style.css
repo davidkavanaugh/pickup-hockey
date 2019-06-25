@@ -4,10 +4,3 @@
     justify-content: center;
     flex-direction: column;
 }
-
-.manager-login-link {
-    margin-top: 25px;
-    font-family: 'Roboto';
-    color: #1400ff;
-    font-size: 0.9em;
-}

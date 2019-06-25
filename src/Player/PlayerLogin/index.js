@@ -21,7 +21,7 @@ class PlayerLogin extends Component {
                     </form>
                     <span className="or">OR</span>
                     <button className="red-btn">Register</button>
-                    <Link className="manager-login-link" to="/manager-login">MANAGER LOGIN</Link>
+                    <Link className="switch-login-link" to="/manager">MANAGER LOGIN</Link>
                 </div>                
             </div>
          );
