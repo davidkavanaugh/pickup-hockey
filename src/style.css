@@ -103,3 +103,10 @@ label {
     color: #1400ff;
     font-size: 0.9em;
 }
+
+#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

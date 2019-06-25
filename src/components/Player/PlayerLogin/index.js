@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './style.css';
-import icon from '../../images/icon.jpg';
+import icon from '../../../images/icon.jpg';
 import { Link } from 'react-router-dom';
 
 class PlayerLogin extends Component {
@@ -12,7 +11,7 @@ class PlayerLogin extends Component {
                     <header>Player Login</header>
                     <span className="spacer"></span>
                 </div>
-                <div id="player_player-login">
+                <div id="login">
                     <form className="form_white-bg">
                         <label>LOGIN</label>
                         <input className="form-input" required type="text" placeholder="username" />
@@ -21,8 +20,8 @@ class PlayerLogin extends Component {
                     </form>
                     <span className="or">OR</span>
                     <button className="red-btn">Register</button>
-                    <Link className="switch-login-link" to="/manager">MANAGER LOGIN</Link>
-                </div>                
+                    <Link className="switch-login-link" to="/manager/login">MANAGER LOGIN</Link>
+                </div>   
             </div>
          );
     }
