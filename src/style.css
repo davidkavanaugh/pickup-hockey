@@ -63,7 +63,8 @@ header {
     border:none;
     outline: 1px;
     text-decoration: none;    
-    min-width: 125px;
+    MIN-width: 125px;
+    text-align: center;
 }
 
 .red-btn:hover {
