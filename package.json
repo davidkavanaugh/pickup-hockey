@@ -4,8 +4,8 @@
   "description": "MERN stack pickup hockey app",
   "main": "server.js",
   "scripts": {
-    "start": "node app.js",
-    "app": "nodemon app.js"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.1",
+    "config": "^3.2.2",
     "express": "^4.17.1",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
