@@ -3,18 +3,20 @@
   "author": "David Kavanaugh",
   "version": "1.0.0",
   "description": "MERN stack pickup hockey app",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon run server/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davidkavanaugh/pickup-hockey.git"
   },
   "keywords": [
-    "pickup-hockey",
+    "pickup hockey",
+    "ice hockey",
     "hockey",
-    "ice-time"
+    "ice time",
+    "rink management"
   ],
   "license": "MIT",
   "bugs": {
