@@ -40,7 +40,7 @@ router.post("/register", (req, res) => {
             newPlayer.password = hash;
             newPlayer
               .save()
-              .then(user => res.json(user))
+              .then(player => res.json(player))
               .catch(err => console.log(err));
           });
         });
