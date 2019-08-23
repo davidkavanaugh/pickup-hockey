@@ -106,7 +106,7 @@ class Register extends Component {
             </div>
             <div className="input-container">
               <input
-                placeholder='Password'
+                placeholder='Confirm Password'
                 onChange={this.onChange}
                 value={this.state.password2}
                 error={errors.password2}
