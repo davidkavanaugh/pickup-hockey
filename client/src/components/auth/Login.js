@@ -63,7 +63,7 @@ class Login extends Component {
               </h3>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
-              <div className="center">
+              <div className="input-container">
                 <input
                   label="Email"
                   placeholder="Email"
@@ -85,7 +85,7 @@ class Login extends Component {
                   {errors.emailnotfound}
                 </span>
               </div>
-              <div className="center">
+              <div className="input-container">
               <input
                     label="Password"
                     placeholder="Password"
