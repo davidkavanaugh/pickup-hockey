@@ -5,15 +5,13 @@ import { logoutUser } from "../../actions/authActions";
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
-class Dashboard extends Component {
+class Logout extends Component {
   onLogoutClick = e => {
     e.preventDefault();
     this.props.logoutUser();
   };
 
   render() {
-    const { user } = this.props.auth;
-
     return (
         <ListItem button
           onClick={this.onLogoutClick}
@@ -28,7 +26,7 @@ class Dashboard extends Component {
   }
 }
 
-Dashboard.propTypes = {
+Logout.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 };
@@ -40,4 +38,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { logoutUser }
-)(Dashboard);
+)(Logout);
