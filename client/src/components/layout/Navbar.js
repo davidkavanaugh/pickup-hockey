@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from 'react-router-dom'
 import Icon from '../../images/icon.jpg';
 import Hamburger from '../../images/hamburger.svg'
@@ -7,20 +7,20 @@ import PropTypes from "prop-types";
 
 const Navbar = ({ component: Component, auth}) => (
   <div className="navbar">
+    <Link to='/'>
+      <img src={Icon} className='icon' alt='website icon' />
+    </Link>
+
+    <h3 className='header'>Pickup Hockey</h3>
+    
     {auth.isAuthenticated === true ? (
       <Link to='/'>
         <img src={Hamburger} className='hamburger' alt='toggle menu' />
       </Link>
     ) : (
-      <Link to='/'>
-        <img src={Icon} className='icon' alt='website icon' />
-      </Link>
+      <span className='spacer'></span>
     )
     }
-    <Link to='/' className='header'>
-      <h3>Pickup Hockey</h3>
-    </Link>
-    <span className='spacer'></span>
   </div>
 );
 
