@@ -1,25 +1,25 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import Icon from '../../images/icon.jpg';
-import Hamburger from '../../images/hamburger.svg'
+import Sidebar from './Sidebar'
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-const Navbar = ({ component: Component, auth}) => (
-  <div className="navbar">
+const Navbar = ({ auth }) => (
+  <div className="navbar">  
     <Link to='/'>
       <img src={Icon} className='icon' alt='website icon' />
     </Link>
 
     <h3 className='header'>Pickup Hockey</h3>
-    
+
     {auth.isAuthenticated === true ? (
       <Link to='/'>
-        <img src={Hamburger} className='hamburger' alt='toggle menu' />
+        <Sidebar />
       </Link>
-    ) : (
-      <span className='spacer'></span>
-    )
+      ) : (
+        <span className='spacer'></span>
+        )
     }
   </div>
 );

@@ -16,12 +16,11 @@ body {
 
 .icon {
     width: 30px;
-    margin: 0px 15px;
+    margin-top: 5px;
+    margin-left: 25px;
 }
-
-.hamburger {
-    width: 30px;
-    margin: 0px 15px;
+.menuBtn {
+    margin-right: 10px!important;
 }
 
 .spacer {
@@ -35,6 +34,7 @@ body {
     font-size: 1.2rem;
     color: black;
     text-decoration: none;
+    margin-left: 15px;
 }
 
 .form_white-bg {
