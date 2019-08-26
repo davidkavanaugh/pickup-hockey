@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 const Navbar = ({ auth }) => (
+ 
   <div className="navbar">  
     <Link to='/'>
       <img src={Icon} className='icon' alt='website icon' />

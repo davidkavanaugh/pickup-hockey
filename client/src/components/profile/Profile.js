@@ -14,16 +14,9 @@ class Profile extends Component {
 
     return (
       <div className="center">
-        <div className="row">
-          <div>
-            <h4>
-              Hey there, {user.name.split(" ")[0]}
-            </h4>
-            <p>
-              You are logged in.
-            </p>
-          </div>
-        </div>
+            <h3 className='righteous'>
+              {user.name}
+            </h3>
       </div>
     );
   }
