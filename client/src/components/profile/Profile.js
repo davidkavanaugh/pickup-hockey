@@ -20,7 +20,7 @@ class Profile extends Component {
               Hey there, {user.name.split(" ")[0]}
             </h4>
             <p>
-              You are logged in
+              You are logged in.
             </p>
           </div>
         </div>
