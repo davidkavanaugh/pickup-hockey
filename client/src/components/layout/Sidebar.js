@@ -12,10 +12,7 @@ import Hamburger from '../../images/hamburger.svg'
 const useStyles = makeStyles({
   list: {
     width: 250,
-  },
-  fullList: {
-    width: 'auto',
-  },
+  }
 });
 
 export default function TemporaryDrawer() {
@@ -44,13 +41,13 @@ export default function TemporaryDrawer() {
     >
       <List>
         <ListItem button>
-          <ListItemText>Play Hockey</ListItemText>
+          <ListItemText><span className='righteous'>Play Hockey</span></ListItemText>
         </ListItem>
         <ListItem button>
-          <ListItemText>My Games</ListItemText>
+          <ListItemText ><span className='righteous'>My Games</span></ListItemText>
         </ListItem>
         <ListItem button>
-          <ListItemText>Locker Room</ListItemText>
+          <ListItemText><span className='righteous'>Locker Room</span></ListItemText>
         </ListItem>
       </List>
 
@@ -58,10 +55,10 @@ export default function TemporaryDrawer() {
 
       <List>
         <ListItem button>
-          <ListItemText>Profile</ListItemText>
+          <ListItemText><span className='righteous'>Profile</span></ListItemText>
         </ListItem>
         <ListItem button>
-          <ListItemText>Logout</ListItemText>
+          <ListItemText><span className='righteous'>Logout</span></ListItemText>
         </ListItem>
       </List>
     </div>
