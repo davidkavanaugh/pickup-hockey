@@ -7,7 +7,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Hamburger from '../../images/hamburger.svg'
-
+import Logout from './Logout'
 
 const useStyles = makeStyles({
   list: {
@@ -57,9 +57,7 @@ export default function TemporaryDrawer() {
         <ListItem button>
           <ListItemText><span className='righteous'>Profile</span></ListItemText>
         </ListItem>
-        <ListItem button>
-          <ListItemText><span className='righteous'>Logout</span></ListItemText>
-        </ListItem>
+        <Logout />
       </List>
     </div>
   );
