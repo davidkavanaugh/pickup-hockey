@@ -4,6 +4,7 @@ import Icon from '../../images/icon.jpg';
 import Sidebar from './Sidebar'
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import Header from './Header';
 
 const Navbar = ({ auth }) => (
  
@@ -12,7 +13,7 @@ const Navbar = ({ auth }) => (
       <img src={Icon} className='icon' alt='website icon' />
     </Link>
 
-    <h3 className='header'>Pickup Hockey</h3>
+    <Header />
 
     {auth.isAuthenticated === true ? (
       <Link to='/'>
