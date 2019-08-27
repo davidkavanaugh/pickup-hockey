@@ -11,7 +11,12 @@ import Navbar from "./components/layout/Navbar";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
-import Profile from "./components/profile/Profile";
+import PlayHockey from "./components/PlayHockey";
+import MyGames from "./components/MyGames";
+import LockerRoom from "./components/LockerRoom";
+import Profile from "./components/Profile";
+import Messages from "./components/Messages";
+
 
 import "./style.css";
 
@@ -45,7 +50,11 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Switch>
+              <PrivateRoute exact path="/play-hockey" component={PlayHockey} />
+              <PrivateRoute exact path="/my-games" component={MyGames} />
+              <PrivateRoute exact path="/locker-room" component={LockerRoom} />
               <PrivateRoute exact path="/profile" component={Profile} />
+              <PrivateRoute exact path="/messages" component={Messages} />
             </Switch>
           </div>
         </Router>

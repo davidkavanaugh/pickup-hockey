@@ -6,12 +6,9 @@ class Header extends Component {
     static propTypes = {
       location: PropTypes.object.isRequired
     }
-
-
   
     render() {
-      const { location } = this.props
-        
+      const { location } = this.props 
       let header = '';
 
       switch(location.pathname) {

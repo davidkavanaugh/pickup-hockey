@@ -8,6 +8,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Hamburger from '../../images/hamburger.svg'
 import Logout from './Logout'
+import { Link } from "react-router-dom";
+
 
 const useStyles = makeStyles({
   list: {
@@ -25,6 +27,7 @@ export default function TemporaryDrawer() {
   });
 
   const toggleDrawer = (side, open) => event => {
+    event.preventDefault();
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
@@ -40,30 +43,43 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        <ListItem button>
-          <ListItemText><span className='righteous'>Play Hockey</span></ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText ><span className='righteous'>My Games</span></ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText><span className='righteous'>Locker Room</span></ListItemText>
-        </ListItem>
+        <Link className="link" to='/play-hockey'>
+          <ListItem button>
+            <ListItemText><span className='righteous'>Play Hockey</span></ListItemText>
+          </ListItem>
+        </Link>
+        <Link className="link" to='/my-games'>
+          <ListItem button>
+            <ListItemText ><span className='righteous'>My Games</span></ListItemText>
+          </ListItem>
+        </Link>
+        <Link className="link" to='/locker-room'>
+          <ListItem button>
+            <ListItemText><span className='righteous'>Locker Room</span></ListItemText>
+          </ListItem>
+        </Link>
+        <Link className="link" to='/messages'>
+          <ListItem button>
+            <ListItemText><span className='righteous'>Messages</span></ListItemText>
+          </ListItem>
+        </Link>
       </List>
 
       <Divider />
 
       <List>
-        <ListItem button>
-          <ListItemText><span className='righteous'>Profile</span></ListItemText>
-        </ListItem>
+        <Link className="link" to='/profile'>
+          <ListItem button>
+            <ListItemText><span className='righteous'>Profile</span></ListItemText>
+          </ListItem>
+        </Link>
         <Logout />
       </List>
     </div>
   );
 
   return (
-    <div>
+    <div className='spacer'>
         <Button 
             onClick={toggleDrawer('right', true)}
             className='menuBtn'

@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
 
 class Profile extends Component {
-  onLogoutClick = e => {
-    e.preventDefault();
-    this.props.logoutUser();
-  };
-
   render() {
     const { user } = this.props.auth;
 
@@ -23,7 +17,6 @@ class Profile extends Component {
 }
 
 Profile.propTypes = {
-  logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 };
 
@@ -31,7 +24,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  { logoutUser }
-)(Profile);
+export default connect(mapStateToProps)(Profile);

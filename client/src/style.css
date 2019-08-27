@@ -19,16 +19,18 @@ body {
 }
 
 .icon {
-    width: 30px;
-    margin-top: 5px;
-    margin-left: 25px;
+    width: 64px;
+    margin-top: 4px;
+    margin-left: 10px;
 }
-.menuBtn {
-    margin-right: 10px!important;
+
+.icon img {
+    width: 24px;
 }
 
 .spacer {
-    width: 74px;
+    margin-right: 10px;
+    width: 64px;
 }
 
 .header {
@@ -173,4 +175,9 @@ cursor: pointer;
     font-family: 'Righteous', cursive;
     font-size: 1.2em;
     color: #5e5e5e;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }

@@ -9,16 +9,16 @@ import Header from './Header';
 const Navbar = ({ auth }) => (
  
   <div className="navbar">  
-    <Link to='/'>
+    <Link className='icon' to='/'>
       <img src={Icon} className='icon' alt='website icon' />
     </Link>
 
     <Header />
 
     {auth.isAuthenticated === true ? (
-      <Link to='/'>
+      
         <Sidebar />
-      </Link>
+  
       ) : (
         <span className='spacer'></span>
         )
