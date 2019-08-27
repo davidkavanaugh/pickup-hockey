@@ -14,7 +14,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import PlayHockey from "./components/PlayHockey";
 import MyGames from "./components/MyGames";
 import LockerRoom from "./components/LockerRoom";
-import Profile from "./components/Profile";
+import Profile from './components/Profile/index.js';
 import Messages from "./components/Messages";
 
 

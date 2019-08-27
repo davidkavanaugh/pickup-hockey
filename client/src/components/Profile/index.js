@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import './style.css';
 
 class Profile extends Component {
   render() {
     const { user } = this.props.auth;
 
     return (
-      <div className="center">
-            <h3 className='righteous'>
-              {user.name}
-            </h3>
+      <div id='profile'>
+        <h3 className='righteous'>
+          {user.name}
+        </h3>
       </div>
     );
   }
