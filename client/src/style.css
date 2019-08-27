@@ -81,11 +81,12 @@ body {
 
 .red-btn:hover {
 cursor: pointer;
+background: #f00000;
 }
 
 .red-btn:active {
     box-shadow: inset 1px 1px 3px 3px rgba(0,0,0,0.3);
-    background: #ff0000;
+    background: #f00000;
 }
 
 .white-btn {
