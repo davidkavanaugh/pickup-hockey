@@ -38,7 +38,7 @@ module.exports = function validateRegisterInput(data) {
   }
 
   if (Validator.isEmpty(data.password2)) {
-    errors.password2 = "Confirm password field is required";
+    errors.password2 = "Please confirm your password";
   }
 
   if (!Validator.isLength(data.password, { min: 6, max: 30 })) {
