@@ -9,12 +9,12 @@ class Register extends Component {
   constructor() {
     super();
     this.state = {
-      name: "",
+      first: "",
+      last: "",
       email: "",
       password: "",
       password2: "",
-      city: "",
-      state: "",
+      hometown: "",
       errors: {}
     };
   }
@@ -42,12 +42,12 @@ class Register extends Component {
     e.preventDefault();
 
     const newUser = {
-      name: this.state.name,
+      first: this.state.first,
+      last: this.state.last,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2,
-      city: this.state.city,
-      state: this.state.state
+      hometown: this.state.hometown
     };
 
     this.props.registerUser(newUser, this.props.history);
@@ -68,17 +68,31 @@ class Register extends Component {
           <form noValidate onSubmit={this.onSubmit}>
             <div className="input-container">
               <input
-                placeholder='Name'
+                placeholder='First Name'
                 onChange={this.onChange}
-                value={this.state.name}
-                error={errors.name}
-                id="name"
+                value={this.state.first}
+                error={errors.first}
+                id="first"
                 type="text"
                 className={classnames("form-input", {
-                  invalid: errors.name
+                  invalid: errors.first
                 })}
               />
-              <span className="red-text">{errors.name}</span>
+              <span className="red-text">{errors.first}</span>
+            </div>
+            <div className="input-container">
+              <input
+                placeholder='Last Name'
+                onChange={this.onChange}
+                value={this.state.last}
+                error={errors.last}
+                id="last"
+                type="text"
+                className={classnames("form-input", {
+                  invalid: errors.last
+                })}
+              />
+              <span className="red-text">{errors.last}</span>
             </div>
             <div className="input-container">
               <input
@@ -125,31 +139,17 @@ class Register extends Component {
             </div>
             <div className="input-container">
               <input
-                placeholder='City'
+                placeholder='Hometown'
                 onChange={this.onChange}
-                value={this.state.city}
-                error={errors.city}
-                id="city"
+                value={this.state.hometown}
+                error={errors.hometown}
+                id="hometown"
                 type="text"
                 className={classnames("form-input", {
-                  invalid: errors.city
+                  invalid: errors.hometown
                 })}
               />
-              <span className="red-text">{errors.city}</span>
-            </div>
-            <div className="input-container">
-              <input
-                placeholder='State/Province'
-                onChange={this.onChange}
-                value={this.state.state}
-                error={errors.state}
-                id="state"
-                type="text"
-                className={classnames("form-input", {
-                  invalid: errors.state
-                })}
-              />
-              <span className="red-text">{errors.state}</span>
+              <span className="red-text">{errors.hometown}</span>
             </div>
             <div className="col center">
               <button

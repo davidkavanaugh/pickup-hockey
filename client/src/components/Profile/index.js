@@ -10,10 +10,10 @@ class Profile extends Component {
     return (
       <div id='profile'>
         <h3 className='righteous'>
-          {user.name}
+          {user.first} {user.last}
         </h3>
         <h3 className='righteous'>
-          {user.city}, {user.state}
+          {user.hometown}
         </h3>
       </div>
     );

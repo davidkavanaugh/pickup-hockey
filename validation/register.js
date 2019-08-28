@@ -5,31 +5,29 @@ module.exports = function validateRegisterInput(data) {
   let errors = {};
 
   // Convert empty fields to an empty string so we can use validator functions
-  data.name = !isEmpty(data.name) ? data.name : "";
+  data.first = !isEmpty(data.first) ? data.first : "";
+  data.last = !isEmpty(data.last) ? data.last : "";
   data.email = !isEmpty(data.email) ? data.email : "";
   data.password = !isEmpty(data.password) ? data.password : "";
   data.password2 = !isEmpty(data.password2) ? data.password2 : "";
-  data.city = !isEmpty(data.city) ? data.city : "";
-  data.state = !isEmpty(data.state) ? data.state : "";
+  data.hometown = !isEmpty(data.hometown) ? data.hometown : "";
 
   // Name checks
-  if (Validator.isEmpty(data.name)) {
-    errors.name = "Name field is required";
+  if (Validator.isEmpty(data.first)) {
+    errors.first = "First Name is required";
+  }
+  if (Validator.isEmpty(data.last)) {
+    errors.last = "Last Name is required";
   }
 
-// Location checks
-if (Validator.isEmpty(data.city)) {
-  errors.city = "City field is required";
-}
-
-if (Validator.isEmpty(data.state)) {
-  errors.state = "State/Province field is required";
-}
-
+  // Hometown checks
+  if (Validator.isEmpty(data.hometown)) {
+    errors.hometown = "Tell people where you're from";
+  }
 
   // Email checks
   if (Validator.isEmpty(data.email)) {
-    errors.email = "Email field is required";
+    errors.email = "Email is required";
   } else if (!Validator.isEmail(data.email)) {
     errors.email = "Email is invalid";
   }

@@ -3,7 +3,11 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const UserSchema = new Schema({
-  name: {
+  first: {
+    type: String,
+    required: true
+  },
+  last: {
     type: String,
     required: true
   },
@@ -15,11 +19,7 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
-  city: {
-    type: String,
-    required: true
-  },
-  state: {
+  hometown: {
     type: String,
     required: true
   },
