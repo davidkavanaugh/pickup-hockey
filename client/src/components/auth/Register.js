@@ -65,7 +65,13 @@ class Register extends Component {
                 Register
               </h3>
           </div>
-          <form noValidate onSubmit={this.onSubmit}>
+          <form 
+            noValidate 
+            onSubmit={this.onSubmit}
+            action="/upload/photo" 
+            enctype="multipart/form-data" 
+            method="POST"
+            >
             <div className="input-container">
               <input
                 placeholder='First Name'
@@ -151,6 +157,12 @@ class Register extends Component {
               />
               <span className="red-text">{errors.hometown}</span>
             </div>
+            {/* <div className="center">
+              <input 
+                type="file" 
+                name="myImage" 
+                accept="image/*" />
+            </div>  */}
             <div className="col center">
               <button
                 type="submit"
