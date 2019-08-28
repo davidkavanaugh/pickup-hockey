@@ -13,7 +13,7 @@ class Profile extends Component {
           {user.name}
         </h3>
         <h3 className='righteous'>
-          {user.city}
+          {user.city}, {user.state}
         </h3>
       </div>
     );

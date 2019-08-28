@@ -14,6 +14,7 @@ class Register extends Component {
       password: "",
       password2: "",
       city: "",
+      state: "",
       errors: {}
     };
   }
@@ -45,7 +46,8 @@ class Register extends Component {
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2,
-      city: this.state.city
+      city: this.state.city,
+      state: this.state.state
     };
 
     this.props.registerUser(newUser, this.props.history);
@@ -134,6 +136,20 @@ class Register extends Component {
                 })}
               />
               <span className="red-text">{errors.city}</span>
+            </div>
+            <div className="input-container">
+              <input
+                placeholder='State/Province'
+                onChange={this.onChange}
+                value={this.state.state}
+                error={errors.state}
+                id="state"
+                type="text"
+                className={classnames("form-input", {
+                  invalid: errors.state
+                })}
+              />
+              <span className="red-text">{errors.state}</span>
             </div>
             <div className="col center">
               <button

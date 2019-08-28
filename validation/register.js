@@ -10,6 +10,7 @@ module.exports = function validateRegisterInput(data) {
   data.password = !isEmpty(data.password) ? data.password : "";
   data.password2 = !isEmpty(data.password2) ? data.password2 : "";
   data.city = !isEmpty(data.city) ? data.city : "";
+  data.state = !isEmpty(data.state) ? data.state : "";
 
   // Name checks
   if (Validator.isEmpty(data.name)) {
@@ -20,6 +21,11 @@ module.exports = function validateRegisterInput(data) {
 if (Validator.isEmpty(data.city)) {
   errors.city = "City field is required";
 }
+
+if (Validator.isEmpty(data.state)) {
+  errors.state = "State/Province field is required";
+}
+
 
   // Email checks
   if (Validator.isEmpty(data.email)) {

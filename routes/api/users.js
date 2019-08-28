@@ -33,7 +33,8 @@ router.post("/register", (req, res) => {
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
-        city: req.body.city
+        city: req.body.city,
+        state: req.body.state
       });
 
       // Hash password before saving in database
@@ -82,7 +83,8 @@ router.post("/login", (req, res) => {
         const payload = {
           id: user.id,
           name: user.name,
-          city: user.city
+          city: user.city,
+          state: user.state
         };
 
         // Sign token
