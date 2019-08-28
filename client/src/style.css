@@ -22,6 +22,7 @@ body {
     width: 64px;
     margin-top: 4px;
     margin-left: 10px;
+    margin-right: -14px;
 }
 
 .icon img {
@@ -127,6 +128,7 @@ cursor: pointer;
     font-size: 1.4em;
     margin-bottom: 15px;
     line-height: 1px;
+    text-align: center;
 }
 
 .or {
