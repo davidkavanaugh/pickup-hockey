@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
+import UploadUserImg from './UploadUserImg';
 
 class Register extends Component {
   constructor() {
@@ -157,7 +158,7 @@ class Register extends Component {
               />
               <span className="red-text">{errors.hometown}</span>
             </div>
-            
+            {/* <UploadUserImg /> */}
             <div className="col center">
               <button
                 type="submit"
