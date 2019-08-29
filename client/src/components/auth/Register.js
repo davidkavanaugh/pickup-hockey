@@ -157,12 +157,7 @@ class Register extends Component {
               />
               <span className="red-text">{errors.hometown}</span>
             </div>
-            {/* <div className="center">
-              <input 
-                type="file" 
-                name="myImage" 
-                accept="image/*" />
-            </div>  */}
+            
             <div className="col center">
               <button
                 type="submit"
