@@ -34,7 +34,8 @@ router.post("/register", (req, res) => {
         last: req.body.last,
         email: req.body.email,
         password: req.body.password,
-        hometown: req.body.hometown
+        hometown: req.body.hometown,
+        profileImg: req.body.profileImg
       });
 
       // Hash password before saving in database
@@ -84,7 +85,8 @@ router.post("/login", (req, res) => {
           id: user.id,
           first: user.first,
           last: user.last,
-          hometown: user.hometown
+          hometown: user.hometown,
+          profileImg: user.profileImg
         };
 
         // Sign token

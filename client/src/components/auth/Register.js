@@ -16,6 +16,7 @@ class Register extends Component {
       password: "",
       password2: "",
       hometown: "",
+      profileImg: null,
       errors: {}
     };
   }
@@ -39,6 +40,10 @@ class Register extends Component {
     this.setState({ [e.target.id]: e.target.value });
   };
 
+  ImgUploadHandler = e => {
+    this.setState({ profileImg: e.target.files[0] });
+  };
+
   onSubmit = e => {
     e.preventDefault();
 
@@ -48,7 +53,8 @@ class Register extends Component {
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2,
-      hometown: this.state.hometown
+      hometown: this.state.hometown,
+      profileImg: this.state.profileImg.name
     };
 
     this.props.registerUser(newUser, this.props.history);
@@ -155,7 +161,11 @@ class Register extends Component {
               />
               <span className="red-text">{errors.hometown}</span>
             </div>
-            <UploadUserImg />
+            <input 
+              type="file"
+              id="profileImg" 
+              onChange={this.ImgUploadHandler}
+              />
             <div className="col center">
               <button
                 type="submit"
@@ -168,7 +178,6 @@ class Register extends Component {
           <p className="grey-text">
               Already have an account? <Link to="/login">Log in</Link>
           </p>
-          <UploadProfileImg />  
           </div>
         </div>
       </div>

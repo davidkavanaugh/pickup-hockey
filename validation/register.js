@@ -12,6 +12,7 @@ module.exports = function validateRegisterInput(data) {
   data.password2 = !isEmpty(data.password2) ? data.password2 : "";
   data.hometown = !isEmpty(data.hometown) ? data.hometown : "";
 
+
   // Name checks
   if (Validator.isEmpty(data.first)) {
     errors.first = "First Name is required";
@@ -48,6 +49,7 @@ module.exports = function validateRegisterInput(data) {
   if (!Validator.equals(data.password, data.password2)) {
     errors.password2 = "Passwords must match";
   }
+
 
   return {
     errors,
