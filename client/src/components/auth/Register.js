@@ -155,6 +155,7 @@ class Register extends Component {
               />
               <span className="red-text">{errors.hometown}</span>
             </div>
+            <UploadUserImg />
             <div className="col center">
               <button
                 type="submit"
