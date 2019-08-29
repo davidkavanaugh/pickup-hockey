@@ -7,11 +7,11 @@ class UploadUserImg extends Component {
     }
     render() { 
         return ( 
-            <form action="/upload/photo" enctype="multipart/form-data" method="POST"> 
+            <form action="/upload/photo" encType="multipart/form-data" method="POST"> 
                 <input type="file" name="myImage" accept="image/*" />
                 <input type="submit" value="Upload Photo"/>
             </form>
-         );
+          );
     }
 }
  

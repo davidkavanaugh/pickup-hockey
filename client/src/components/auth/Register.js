@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
-import UploadUserImg from './UploadUserImg';
+import UploadProfileImg from './UploadProfileImg';
 
 class Register extends Component {
   constructor() {
@@ -69,9 +69,6 @@ class Register extends Component {
           <form 
             noValidate 
             onSubmit={this.onSubmit}
-            action="/upload/photo" 
-            enctype="multipart/form-data" 
-            method="POST"
             >
             <div className="input-container">
               <input
@@ -158,7 +155,6 @@ class Register extends Component {
               />
               <span className="red-text">{errors.hometown}</span>
             </div>
-            {/* <UploadUserImg /> */}
             <div className="col center">
               <button
                 type="submit"
@@ -168,9 +164,10 @@ class Register extends Component {
               </button>
             </div>
           </form>
-            <p className="grey-text">
-                Already have an account? <Link to="/login">Log in</Link>
-            </p>
+          <p className="grey-text">
+              Already have an account? <Link to="/login">Log in</Link>
+          </p>
+          <UploadProfileImg />  
           </div>
         </div>
       </div>
