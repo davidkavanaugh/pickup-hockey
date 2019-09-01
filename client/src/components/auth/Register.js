@@ -161,11 +161,11 @@ class Register extends Component {
               />
               <span className="red-text">{errors.hometown}</span>
             </div>
-            <input 
+            {/* <input 
               type="file"
               id="profileImg" 
               onChange={this.ImgUploadHandler}
-              />
+              /> */}
             <div className="col center">
               <button
                 type="submit"
